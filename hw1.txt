@@ -1,4 +1,5 @@
 Hw1
+Junqing Zou (jz862)
 what we covered? why does that matter?
 1. Slack: Slack could provide an efficient platform to communicate information and work together.
 2. Amazon Web Services and EC2 Instances: We learned how to set up EC2 Instances in AWS and use Terminal to access the instance. This could allow us to store our program in the cloud and use the hardware provided by AWS to run the program, which could be faster and more efficient.
