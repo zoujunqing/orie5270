@@ -1,0 +1,10 @@
+Hw1
+Junqing Zou (jz862)
+what we covered? why does that matter?
+1. Slack: Slack could provide an efficient platform to communicate information and work together.
+2. Amazon Web Services and EC2 Instances: We learned how to set up EC2 Instances in AWS and use Terminal to access the instance. This could allow us to store our program in the cloud and use the hardware provided by AWS to run the program, which could be faster and more efficient.
+3. Terminal Command: We learned how to access or change directories and create files. This could be more efficient than user interface in some operations
+4. Vim: We learned how to create, write and save text using vim. This is an efficient way to create files in command line
+5. Git: We learned how to clone git, pull git, push git, add file, commit change, view log in terminal. Git is useful for people to share programs or other files, work together, and keep track of change history
+6. Shell: We learned how to run shell script. Shell could allow us to pass a set of parameters to the program and run repeatedly, eg, simulation.
+7. Python, PyCharm, Class: We learned how to write class in python and create a binary tree. Class could help us create a type of object that has certain functionality, and create new objects by calling the class, so that we do not need to write the same functions for each object we create.
