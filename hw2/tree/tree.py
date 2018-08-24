@@ -1,20 +1,27 @@
 class Tree(object):
     def __init__(self, root):
+        """
+        initialize the class
+        :param root: a Node object, the root of the tree
+        """
         self.root = root
-    """
-    def get_value_root(self):
-        if self.root is not None:
-            return self.root.value
-        else:
-            return None
-    """
 
     def get_height(self, root):
+        """
+        get the hight of the tree
+        :param root: a Node object
+        :return: the height value of the tree
+        """
         if not root:
             return 0
         return 1 + max(self.get_height(root.left), self.get_height(root.right))
 
     def printTree(self, root):
+        """
+        print the tree
+        :param root: a Node object, the root of the tree
+        :return: a list of tree
+        """
         N = self.get_height(root)
         M = 2 ** N - 1
         ret = [["|"] * M for x in range(N)]
@@ -33,6 +40,12 @@ class Tree(object):
 class Node(object):
 
     def __init__(self, value, left, right):
+        """
+        initialize an instance of node class.
+        :param value: the value of the node, int
+        :param left: the left node, belong to the Node() class.
+        :param right:the right node, belong to the Node() class.
+        """
         self.value = value
         self.left = left
         self.right = right
