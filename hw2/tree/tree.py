@@ -1,6 +1,3 @@
-import numpy as np
-
-
 class Tree(object):
     def __init__(self, root):
         self.root = root
@@ -30,7 +27,7 @@ class Tree(object):
                 bfs.append((node.left, i + 1, l, j))
             if node.right:
                 bfs.append((node.right, i + 1, j, r))
-        return np.mat(ret)
+        return ret
 
 
 class Node(object):
