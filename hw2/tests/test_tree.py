@@ -1,18 +1,13 @@
 from tree.tree import Tree, Node
 import unittest
-import numpy as np
 
 
 class test_Printtree(unittest.TestCase):
     def test_printtree(self):
-        b = Node(1, None, None)
-        c = Node(2, b, None)
-        d = Node(5, c, None)
-        e = Node(7, None, d)
-        a = Tree(e)
+        a = Node(1, Node(2, Node(4, None, None), None), Node(3, None, None))
+        b = Tree(a)
 
-        res = np.array([['|', '|', '|', 7, '|', '|', '|'],
-                        ['|', '|', '|', '|', 5, '|', '|'],
-                        ['|', '|', '|', 2, '|', '|', '|'],
-                        ['|', '|', 1, '|', '|', '|', '|']])
-        assert len(res) == len(a.printTree(e))
+        res = [['|', '|', '|', '1', '|', '|', '|'],
+               ['|', '2', '|', '|', '|', '3', '|'],
+               ['4', '|', '|', '|', '|', '|', '|']]
+        assert res == b.printTree(a)
