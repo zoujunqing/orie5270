@@ -1,9 +1,9 @@
 from tree.tree import Tree, Node
-
 import unittest
+import numpy as np
 
 
-class TestPrinttree(unittest.TestCase):
+class test_Printtree(unittest.TestCase):
     def test_printtree(self):
         b = Node(1, None, None)
         c = Node(2, b, None)
@@ -11,8 +11,8 @@ class TestPrinttree(unittest.TestCase):
         e = Node(7, None, d)
         a = Tree(e)
 
-        res = [['|', '|', '|', 7, '|', '|', '|'], ['|', '|', '|', '|', 5, '|', '|'], ['|', '|', '|', 2, '|', '|', '|'],
-               ['|', '|', 1, '|', '|', '|', '|']]
-        for i in range(4):
-            res[i] = ''.join(list(map(str, res[i])))
-        assert '\n'.join(res) == a.print_tree()
+        res = np.array([['|', '|', '|', 7, '|', '|', '|'],
+                        ['|', '|', '|', '|', 5, '|', '|'],
+                        ['|', '|', '|', 2, '|', '|', '|'],
+                        ['|', '|', 1, '|', '|', '|', '|']])
+        assert len(res) == len(a.printTree(e))
