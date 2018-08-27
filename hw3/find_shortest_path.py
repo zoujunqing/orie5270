@@ -34,20 +34,7 @@ def create_graph(name_txt_file):
     return graph
 
 def find_shortest_path(name_txt_file, source, destination):
-    file = open(name_txt_file, "r")
-    lines = file.readlines()
-    graph = dict()
-    line_len = len(lines)
-    if line_len % 2 == 0:
-        for i in range(line_len):
-            if i % 2 == 1:
-                graph[float(lines[i-1])] = create_edges(lines[i])
-    else:
-        for i in range(line_len):
-            if i % 2 == 1:
-                graph[float(lines[i-1])] = create_edges(lines[i])
-        graph[float(lines[-1])] = {}
-
+    graph = create_graph(name_txt_file)
     S = set()
     F = [(0, source)]
     heapq.heapify(F)
